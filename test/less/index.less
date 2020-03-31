@@ -1,0 +1,29 @@
+@import './mixin.less'; // 导入
+
+// 定义变量
+@border: 1px solid pink;
+
+
+.container {
+    border: @border;
+
+    // 嵌套
+    .title {
+        .font-size();
+
+        // & 代表父选择器
+        &:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #padding-lr();
+    }
+
+
+    // 按钮
+    .button {
+        // #bundle.button();
+        #bundle > .button();
+    }
+}

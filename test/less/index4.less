@@ -1,0 +1,20 @@
+// mixin 参数的使用
+
+
+@import './mixin.less';
+
+
+// 参数
+.mixin(@color:purple; @margin:10px; @padding:10px ){
+    color: @color;
+    margin: @margin;
+    padding: @padding;
+}
+
+.container4 {
+    .container-area();
+
+    .more-params {
+        .mixin();
+    }
+}

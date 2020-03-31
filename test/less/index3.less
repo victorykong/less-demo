@@ -1,0 +1,15 @@
+@import './mixin.less';
+
+
+.container3{
+    .container-area();
+
+    // +_ 空格, + 适合 , 分隔的属性
+    .merge {
+        .font();
+        font+_:bold;
+
+        .shadow();
+        box-shadow+: 0 0 20px black;
+    }
+}

@@ -1,0 +1,44 @@
+// 混入到其它规则集
+.font-size() { // 加 () 不会出现在编译后的 css 文件中
+    font-size: 30px;
+}
+
+// merge
+.font (){
+  font+_: 20px;
+}
+.shadow (){
+  box-shadow+: inset 0 0 10px #555;
+}
+
+
+#padding-lr() {
+    padding: 0 20px;
+}
+
+// 容器区域范围
+.container-area (){
+  margin-top: 10px;
+  border: 1px solid red;
+}
+
+
+#bundle() {
+  .button {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  // 多余的
+  .tag1 {
+    font-size: 20px;
+  }
+
+  .tag2 {
+    font-size: 22px;
+  }
+}

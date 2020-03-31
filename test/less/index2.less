@@ -1,0 +1,18 @@
+@import './mixin.less';
+
+.container2 {
+    .container-area();
+
+    // 组合类名
+    .message {
+        &-success{
+            color: greenyellow;
+        }
+        &-warning{
+            color: orange;
+        }
+        &-error{
+            color: red;
+        }
+    }
+}
